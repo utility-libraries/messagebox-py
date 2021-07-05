@@ -4,7 +4,7 @@ Copyright (c) 2021 PlayerG9. All rights reserved.
 
 todo: TaskDialog
 """
-import cstylees
+import ctypes
 
 __author__ = 'PlayerG9'
 __version__ = '0.1'
