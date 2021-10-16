@@ -14,7 +14,7 @@ __all__ = [
     'EventMessageBox'
 ]
 
-_msg = cstylees.windll.user32.MessageBoxW
+_msg = ctypes.windll.user32.MessageBoxW
 
 
 _parseback = {
