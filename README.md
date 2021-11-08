@@ -6,7 +6,7 @@
 
 | Platform     | Supported | Tested |
 | ------------ | --------- | ------ |
-| Windows      | ✕         | ✕     |
+| Windows      | ✓         | ✓     |
 | Linux/Mint   | ✕         | ✕     |
 | Linux/Xorg   | ✕         | ✕     |
 | Linux/GNOME  | ✕         | ✕     |
@@ -15,10 +15,19 @@
 
 [^1]: I need tester. please report bugs etc. under your platform  
 
+# Message-Boxes
+- showinfo
+- showwarning
+- showerror
+- askquestion
+- askokcancel
+- askyesno
+- askretrycancel
+
 # Usage
 
 ```python
 import messagebox
 
-messagebox.show_info('Success', 'This package works')
+messagebox.showinfo('Success', 'This package works')
 ```
