@@ -5,4 +5,4 @@ r"""
 import messagebox
 
 
-print(messagebox.showinfo('title', 'message'))
+print(messagebox.askquestion('title', 'message'))

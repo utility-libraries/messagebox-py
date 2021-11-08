@@ -10,6 +10,9 @@ MB_WARNING = '--warning'
 MB_ERROR = '--error'
 MB_QUESTION = '--question'
 
+IDYES = 0
+IDNO = 1
+
 
 def _msg(title: str, message: str, what):
     result = subprocess.run([
@@ -34,7 +37,13 @@ def showerror(title: str, message: str):
 
 
 def askquestion(title: str, message: str):
-    print(_msg(title, message, MB_QUESTION))
+    result = _msg(title, message, MB_QUESTION)
+    if result == IDYES:
+        return True
+    elif result == IDNO:
+        return False
+    else:
+        raise SystemError('unknown return code: {}'.format(result))
 
 
 def askokcancel(title: str, message: str):
@@ -42,7 +51,13 @@ def askokcancel(title: str, message: str):
 
 
 def askyesno(title: str, message: str):
-    _msg(title, message, MB_INFO)
+    result = _msg(title, message, MB_QUESTION)
+    if result == IDYES:
+        return True
+    elif result == IDNO:
+        return False
+    else:
+        raise SystemError('unknown return code: {}'.format(result))
 
 
 def askyesnocancel(title: str, message: str):
