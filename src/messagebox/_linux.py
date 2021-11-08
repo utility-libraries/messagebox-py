@@ -8,6 +8,7 @@ import subprocess
 MB_INFO = '--info'
 MB_WARNING = '--warning'
 MB_ERROR = '--error'
+MB_QUESTION = '--question'
 
 
 def _msg(title: str, message: str, what):
@@ -33,7 +34,7 @@ def showerror(title: str, message: str):
 
 
 def askquestion(title: str, message: str):
-    print(_msg(title, message, MB_INFO))
+    print(_msg(title, message, MB_QUESTION))
 
 
 def askokcancel(title: str, message: str):
