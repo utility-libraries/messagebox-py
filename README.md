@@ -7,10 +7,10 @@
 | Platform     | Supported | Tested |
 | ------------ | --------- | ------ |
 | Windows      | ✓         | ✓     |
-| Linux/Mint   | ✕         | ✕     |
+| Linux/Mint   | ✓         | ✕     |
+| Linux/Ubuntu | ✓         | ✕     |
 | Linux/Xorg   | ✕         | ✕     |
 | Linux/GNOME  | ✕         | ✕     |
-| Linux/Ubuntu | ✕         | ✕     |
 | macOS        | ✕         | ✕     |
 
 [^1]: I need tester. please report bugs etc. under your platform  
