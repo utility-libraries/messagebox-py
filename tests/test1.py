@@ -5,4 +5,4 @@ r"""
 import messagebox
 
 
-help(messagebox)
+print(messagebox.showinfo('title', 'message'))
