@@ -33,8 +33,10 @@ __maintainer__ = "PlayerG9"
 __email__ = None
 __status__ = "Prototype"  # Prototype, Development, Production
 
+
 from ._dummy import *  # contains descriptions and help for IDE or reading of package
 from ._dummy import __all__
+
 
 try:  # this block updates the functions corresponding to the operating system
     import sys as __sys
