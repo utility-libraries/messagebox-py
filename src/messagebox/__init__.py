@@ -34,12 +34,19 @@ __email__ = None
 __status__ = "Prototype"  # Prototype, Development, Production
 
 from ._dummy import *  # contains descriptions and help for IDE or reading of package
-
+from ._dummy import __all__
 
 try:  # this block updates the functions corresponding to the operating system
     import sys as __sys
-    import importlib as __importlib
-    __module = __importlib.import_module('_{}'.format(__sys.platform), '.')
-    globals().update(__module.__dict__)
+    import importlib as __il
+    import functools as __ft
+    __module = __il.import_module('._{}'.format(__sys.platform), __package__)
+    globals().update(  # update the functions but keep the help/documentation from _dummy.py
+        {
+            k: __ft.wraps(globals()[k])(getattr(__module, k))
+            for k in __all__
+            if hasattr(__module, k)  # this line is for test-purposes only (implementing a new os)
+        }
+    )
 except ImportError:
-    raise ImportError('this platform is not supported')
+    raise ImportError('this platform is not supported: {}'.format(__sys.platform))
