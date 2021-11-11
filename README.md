@@ -1,13 +1,17 @@
 # PyMessageBox
  Messagebox for userinput/useroutput **WITHOUT library dependencies** like tkinter
 
+Installation: `pip install messagebox`  
+then you can replace `from tkinter import messagebox`
+with `import messagebox` and your code should work fine  
+(package recommended if you don't use tkinter as your gui-library)
 
 # Supported platforms [^1]
 
 | Platform     | Supported | Tested |
 | ------------ | --------- | ------ |
 | Windows      | ✓         | ✓     |
-| Linux/Mint   | ✓         | ✕     |
+| Linux/Mint   | ✓         | ✓     |
 | Linux/Ubuntu | ✓         | ✕     |
 | Linux/Xorg   | ✕         | ✕     |
 | Linux/GNOME  | ✕         | ✕     |
